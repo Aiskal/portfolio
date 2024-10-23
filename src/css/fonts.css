@@ -1,0 +1,9 @@
+@font-face {
+    font-family: pixel;
+    src: url(../fonts/Geo/Geo-Regular.woff2);
+}
+
+@font-face {
+    font-family: text;
+    src: url(../fonts/Roboto/Roboto-Black.woff2);
+}
