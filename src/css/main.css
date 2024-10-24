@@ -1,0 +1,37 @@
+@import url("./fonts.css");
+@import url("./landing.css");
+
+:root{
+    --primary:#678d58;
+    --primarybis:#a6c48a;
+    --secondary:#7a93ac;
+    --secondarybis:#92bcea;
+    --tertiary:#A3D9FF;
+
+    --black: #342a21;
+    --white: #fafcfb;
+    --grey: #e3e3e3;
+
+    /* --screenX: 25px; */
+    /* --screenY: var(--screenX); */
+}
+
+html, body {
+    background-color: var(--white);
+    padding: 0;
+    margin: 0;
+    font-family: text;
+    overflow-x: hidden;
+}
+body{
+    /* margin: var(--screenY) var(--screenX); */
+}
+
+h1,h2,h3,h4,h5{
+    margin: 0;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
