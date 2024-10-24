@@ -3,25 +3,58 @@
     height: 100vh;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    position: relative;
 
+    background: url('../img/motif_pokedex.png') repeat;
+    background-size: 100px 100px;
     background-color: var(--grey);
+    color: var(--black);
+}
+#landing::before,
+#landing::after {
+    position: absolute;
+    opacity: 0.09;
+    text-align: center;
+}
+
+#landing::before {
+    content:"Ready?";
+    bottom: 25px;
+    right: 0;
+
+    font-size: 2em;
+
+    width: 150px;
+    height: 150px;
+}
+#landing::after {
+    content:"";
+    bottom: 5px;
+    right: 0;
+
+    width: 150px;
+    height: 150px;
+
+    background: url("../svg/arrow.svg") 0 0 no-repeat;
+    background-size: contain;
 }
 #landing #me {
     position: relative;
     width: clamp(200px,30vw,400px);
     height: clamp(200px,30vw,400px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 } 
-#landing picture{
-    overflow: hidden;
+#landing #me picture{
     width: 100%;
     height: 100%;
     display: block;
 }
-#landing picture img{
+#landing #me picture img{
     object-position: 0% 25%;
 
     border-radius: 100%;
@@ -63,6 +96,19 @@
 
     border-radius: 100%;
     border: 1px solid var(--black);
+
+    animation: sphereRotate 50s infinite linear reverse;
+}
+#landing #sphere2::after{
+    content: "";
+    background-color: var(--primary);
+    position: absolute;
+    top: 50%;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+
+    transform: translate(-50%,-50%);
 }
 #landing #sphere2::before{
     content: "";
@@ -90,28 +136,50 @@
 
 #landing #text{
     text-align: center;
+
+    position: absolute;
+    top: calc(100% + 10px);
 }
 #landing #text h1{
     font-size: 1em;
     font-style: italic;
     position: fixed;
-    text-align: center;
+    text-align: right;
 
     top: 50px;
     right: 50px;
+}
+#landing #text h1 a{
+    color: inherit;
+    text-decoration: none;
+    z-index: 90;
+    position: relative;
 }
 #landing #text #player{
     font-family: pixel;
     font-size: 5em;
 
-    /* animation: twinkle 1s infinite linear; */
+    white-space: nowrap;
 
 }
 #landing #text #pseudo{
     font-family: pixel;
     font-size: 2em;
     animation: twinkle 1s infinite linear;
+    position: relative;
+}
+#landing #text #pseudo::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 35px;
+    height: 35px;
 
+    transform: translate(-50%,-50%) rotate(-90deg);
+
+    background: url("../svg/arrow.svg") 0 0 no-repeat;
+    background-size: contain;
 }
 
 @keyframes twinkle {

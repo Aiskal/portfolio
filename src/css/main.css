@@ -1,5 +1,6 @@
 @import url("./fonts.css");
 @import url("./landing.css");
+@import url("./cv.css");
 
 :root{
     --primary:#678d58;
@@ -27,11 +28,60 @@ body{
     /* margin: var(--screenY) var(--screenX); */
 }
 
-h1,h2,h3,h4,h5{
+body::-webkit-scrollbar-track
+{
+	background-color: var(--grey);
+}
+body::-webkit-scrollbar
+{
+	width: 10px;
+}
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-linear-gradient(90deg, var(--primary), var(--primarybis));
+}
+
+
+
+h1,h2,h3,h4,h5,ul,p{
     margin: 0;
 }
 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+ul {
+    list-style: none;
+}
+
+.cursor-trail{
+    animation: fadeOut 1s forwards;
+    position: absolute;
+}
+.cursor-trail-primary{
+    background-color: var(--primary);
+}
+.cursor-trail-primarybis{
+    background-color: var(--primarybis);
+}
+.cursor-trail-secondary{
+    background-color: var(--secondary);
+}
+.cursor-trail-secondarybis{
+    background-color: var(--secondarybis);
+}
+
+@keyframes fadeOut {
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+#not-landing{
+    background-color: var(--secondary);
+    color: var(--white);
 }
