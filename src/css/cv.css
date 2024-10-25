@@ -1,61 +1,18 @@
+/* :root{
+    --prlgrm:10px;
+} */
+
 #cv {
     height: 100vh;
     position: relative;
 
     z-index: 0;
     overflow: hidden;
-}
-
-#cv #choixperso {
-    position: relative;
-    padding-top: 75px;
-
-}
-#cv #choixperso::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 130%;
-    top: 0;
-    left: 0;
-
-    background: linear-gradient(var(--black), transparent);
-    opacity: 0.3;
-}
-#cv #choixpersotext{
-    padding-left: 100px;
-    text-transform: uppercase;
-    position: relative;
-
-    font-size: 2.5em;
-    width: fit-content;
-    opacity: 0.7;
-
-    font-family: pixel;
-}
-
-#cv #choixpersotext::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 120%;
-    top: 0;
-    left: 0;
-
-    border-bottom: 1px solid var(--white);
-}
-#cv #perso{
-    position: relative;
+    background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.493) 100%);
 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-
-    height: 100%;
-    width: 100%;
+    flex-direction: column;
 }
-
 #cv::before{
     content: "";
     position: absolute;
@@ -70,14 +27,186 @@
     z-index: -1;
 }
 
-#cv::after * {
-    z-index: 1;
+#cv ul#hero-menu {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 10px 0;
+    justify-content: center;
+    gap: 2px;
+
+    font-size: 2em;
+    font-family: pixel;
+}
+#cv ul#hero-menu li{
+    padding: 15px 25px;
+    background-color: var(--black);
+    color: var(--white);
+    border-top: none;
+    border-bottom: none;
+
+    position: relative;
+    /* clip-path: polygon(100% 0, 100% 100%, 90% 95%, 10% 95%, 0 100%, 0% 0%); */
+    /* clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%); */
+    clip-path: polygon(0% 0%, 0 10px, 10px 0, 15px 0, 0 15px, 0 100%, 100% 100%, 100% 0%);
+    text-transform: uppercase;
+
+    transition: all 0.5s ease;
+}
+#cv ul#hero-menu li.cv{
+    background-color: var(--primarybis);
+    color: var(--white);
+}
+#cv ul#hero-menu img{
+    width: 20px;
+    color: var(--white);
+}
+#cv ul#hero-menu li:hover,
+#cv ul#hero-menu li.active{
+    background-color: var(--white);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+
+ /* #cv ul#hero-menu li::before{
+    width  : 100%;
+    height : 100%;
+    content: '';
+    
+    background-color: var(--white);
+    position : absolute;
+    top: 0;
+    left: 0;
+} */
+
+
+#cv h3{
+    padding-left: 100px;
+    text-transform: uppercase;
+    position: relative;
+
+    font-size: 2.5em;
+    width: fit-content;
+    opacity: 0.7;
+
+    margin: 20px 0px;
+
+    font-family: pixel;
+}
+
+#cv h3::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    top: 0;
+    left: 0;
+
+    border-bottom: 1px solid var(--white);
+}
+
+
+
+#cv #screen-hero{
+    display: flex;
+    margin: 0px 30px;
+    height: 100%;
+}
+#cv #screen-hero > *{
+    width: 50%;
+}
+
+
+#cv #left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 200px;
+}
+
+#cv #left h4{
+    font-size: 12em;
+    font-family: pixel;
+    text-transform: uppercase;
+    opacity: 0.7;
+    position: relative;
+}
+#cv #left h4::after{
+    content: "Professeur";
+    font-family: mytext;
+    font-size: large;
+    text-transform: capitalize;
+    font-style: italic;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    bottom: 10px;
+    left: 10px;
+}
+
+
+#cv #hero-ul{
+    display: flex;
+}
+#cv #hero-ul li{
+    background-color: var(--black);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    width: 125px;
+    height: 140px;
+
+    overflow: hidden;
+    filter: grayscale(80%);
+    margin-right: -15px;
+
+    border-top: 5px solid var(--black);
+    border-bottom: 5px solid var(--black);
+
+    transition: all 0.5s ease;
+
+    cursor: pointer;
+}
+#cv #hero-ul li.active,
+#cv #hero-ul li:hover{
+    filter: none;
+    border-top: 5px solid var(--secondarybis);
+    border-bottom: 5px solid var(--secondarybis);
+}
+
+#cv #hero-ul li:hover img,
+#cv #hero-ul li.active img{
+    transform: scale(1.1);
+}
+
+#cv #hero-ul li img{
+    width: 200%;
+    object-position: -20px top;
+    transform: scale(1);
+    transition: all 0.5s ease;
+
+}
+
+#cv #right{
+    position: relative;
+    margin-right: 70px;
+}
+#cv picture img {
+    object-fit: contain;
+}
+#cv picture.hero{
+    width: auto;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: absolute;
 }
 
 #cv #lvl{
     position: absolute;
-    top: 20vh;
-    left: 20vh;
+    top: 0;
+    right: 0;
     font-size: 2.5em;
     width: fit-content;
     text-align: center;
@@ -86,8 +215,6 @@
     border: 2px solid var(--black);
     border-radius: 100%;
     padding: 30px;
-}
-#cv #lvl p {
 }
 #cv #lvl::before{
     content: "";
@@ -99,36 +226,5 @@
     left: 50%;
     border: 1px double var(--white);
     border-radius: 100%;
-    /* opacity: 0.08; */
-}
-#cv ul{
-    border-left: 2px solid var(--black);
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-#cv picture img {
-    object-fit: contain;
-}
-
-#cv picture.hero{
-    width: auto;
-    height: 100%;
-    display: block;
-    overflow: hidden;
-    position: relative;
-    bottom: -20%;
-    right: 0px;
-}
-
-
-
-@keyframes pulse {
-    0%, 100% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1.1);
-    }
+    opacity: 0.08;
 }

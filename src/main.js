@@ -1,7 +1,7 @@
 document.addEventListener('mousemove', function (e) {
     const chance = Math.random();
 
-    if (chance < 0.05) {
+    if (chance < 0.3) {
         createPixel(e.pageX, e.pageY);
     }
 });

@@ -1,6 +1,7 @@
 @import url("./fonts.css");
 @import url("./landing.css");
 @import url("./cv.css");
+@import url("./levels.css");
 
 :root{
     --primary:#678d58;
@@ -21,7 +22,7 @@ html, body {
     background-color: var(--white);
     padding: 0;
     margin: 0;
-    font-family: text;
+    font-family: mytext;
     overflow-x: hidden;
 }
 body{
@@ -60,6 +61,7 @@ ul {
 .cursor-trail{
     animation: fadeOut 1s forwards;
     position: absolute;
+    pointer-events: none
 }
 .cursor-trail-primary{
     background-color: var(--primary);

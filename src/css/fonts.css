@@ -4,6 +4,24 @@
 }
 
 @font-face {
-    font-family: text;
+    font-family: mytext;
     src: url(../fonts/Roboto/Roboto-Black.woff2);
+}
+
+@font-face {
+    font-family: mytext;
+    font-style: italic;
+    src: url(../fonts/Roboto/Roboto-Italic.woff2);
+}
+
+@font-face {
+    font-family: mytext;
+    font-weight: lighter;
+    src: url(../fonts/Roboto/Roboto-Light.woff2);
+}
+
+@font-face {
+    font-family: mytext;
+    font-weight: bold;
+    src: url(../fonts/Roboto/Roboto-Bold.woff2);
 }
