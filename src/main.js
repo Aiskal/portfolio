@@ -6,6 +6,7 @@ document.addEventListener('mousemove', function (e) {
     }
 });
 
+
 function createPixel(x, y) {
     const pixel = document.createElement('div');
 

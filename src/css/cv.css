@@ -2,11 +2,58 @@
     height: 100vh;
     position: relative;
 
+    z-index: 0;
+    overflow: hidden;
+}
+
+#cv #choixperso {
+    position: relative;
+    padding-top: 75px;
+
+}
+#cv #choixperso::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(var(--black), transparent);
+    opacity: 0.3;
+}
+#cv #choixpersotext{
+    padding-left: 100px;
+    text-transform: uppercase;
+    position: relative;
+
+    font-size: 2.5em;
+    width: fit-content;
+    opacity: 0.7;
+
+    font-family: pixel;
+}
+
+#cv #choixpersotext::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    top: 0;
+    left: 0;
+
+    border-bottom: 1px solid var(--white);
+}
+#cv #perso{
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row-reverse;
 
-    z-index: 0;
+    height: 100%;
+    width: 100%;
 }
 
 #cv::before{
@@ -26,6 +73,34 @@
 #cv::after * {
     z-index: 1;
 }
+
+#cv #lvl{
+    position: absolute;
+    top: 20vh;
+    left: 20vh;
+    font-size: 2.5em;
+    width: fit-content;
+    text-align: center;
+    font-family: pixel;
+
+    border: 2px solid var(--black);
+    border-radius: 100%;
+    padding: 30px;
+}
+#cv #lvl p {
+}
+#cv #lvl::before{
+    content: "";
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border: 1px double var(--white);
+    border-radius: 100%;
+    /* opacity: 0.08; */
+}
 #cv ul{
     border-left: 2px solid var(--black);
     display: flex;
@@ -39,9 +114,12 @@
 
 #cv picture.hero{
     width: auto;
-    height: 60%;
+    height: 100%;
     display: block;
     overflow: hidden;
+    position: relative;
+    bottom: -20%;
+    right: 0px;
 }
 
 
