@@ -87,3 +87,7 @@ ul {
     background-color: var(--secondary);
     color: var(--white);
 }
+
+.user-none{
+    user-select: none;
+}
