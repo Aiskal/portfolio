@@ -1,4 +1,5 @@
 import dataSkins from "./skins.js";
+import dataProjects from "./projects.js";
 
 document.addEventListener('mousemove', function (e) {
     const chance = Math.random();
@@ -43,6 +44,7 @@ function createPixel(x, y) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    /// SKINS
     const heroUl = document.querySelector('#hero-ul');
     const heroImage = document.querySelector('#right picture img');
     const textHero = document.querySelector('#text-hero i');
@@ -71,4 +73,64 @@ document.addEventListener('DOMContentLoaded', async () => {
             textHero.textContent = name;
         }
     });
+    /// --- SKINS
+
+    /// PROJECTS
+    const levelsUl = document.querySelector("#levels ul");
+
+    Object.entries(dataProjects.projects).forEach(([category, projects], index) => {
+        if (projects.length > 0) {
+            const li = document.createElement("li");
+    
+            const h4 = document.createElement("h4");
+            h4.textContent = `Monde ${index + 1}`;
+            li.appendChild(h4);
+    
+            const iElement = document.createElement("i");
+            iElement.textContent = category;
+            li.appendChild(iElement);
+
+            const projectContainer = document.createElement("div");
+            projectContainer.classList.add("carousel");
+
+            projects.forEach((project) => {
+                if (project.img) {
+                    const projectDiv = document.createElement("div");
+                    projectDiv.classList.add("carousel-item");
+
+                    const img = document.createElement("img");
+                    img.src = project.img;
+                    img.alt = project.name;
+
+                    const overlay = document.createElement("div");
+                    overlay.classList.add("overlay");
+                    overlay.innerHTML = `
+                        <h4>${project.name}</h4>
+                        <p>${project.description}</p>
+                        <p><strong>Date:</strong> ${project.date}</p>
+                        <p><strong>Duration:</strong> ${project.span}</p>
+                        <a href="${project.link}" target="_blank">Learn More</a>
+                    `;
+
+                    img.addEventListener("click", () => {
+                        document.querySelectorAll(".overlay").forEach((overlay) => overlay.classList.remove("active"));
+                        document.querySelectorAll(".carousel-item").forEach((item) => item.classList.remove("active"));
+                    
+                        overlay.classList.toggle("active");
+                        projectDiv.classList.toggle("active");
+                    });
+
+                    projectDiv.appendChild(img);
+                    projectDiv.appendChild(overlay);
+                    projectContainer.appendChild(projectDiv);
+                }
+            });
+
+            li.appendChild(projectContainer);
+            levelsUl.appendChild(li);
+        }
+    });
+
+    
+    /// --- PROJECTS
 });

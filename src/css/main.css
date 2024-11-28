@@ -61,7 +61,8 @@ ul {
 .cursor-trail{
     animation: fadeOut 1s forwards;
     position: absolute;
-    pointer-events: none
+    pointer-events: none;
+    z-index: 100;
 }
 .cursor-trail-primary{
     background-color: var(--primary);
