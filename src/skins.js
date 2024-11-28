@@ -1,12 +1,12 @@
 const dataSkins = {
     "skins": {
-        "Professeur": {
+        "Professor": {
             "img": "professeur"
         },
         "Futurist": {
             "img": "vr"
         },
-        "Past self": {
+        "Past-self": {
             "img": "minime"
         }
     }

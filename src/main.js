@@ -1,6 +1,7 @@
 import dataSkins from "./skins.js";
 import dataProjects from "./projects.js";
 
+//PIXELS SUR SOURIS
 document.addEventListener('mousemove', function (e) {
     const chance = Math.random();
 
@@ -8,7 +9,6 @@ document.addEventListener('mousemove', function (e) {
         createPixel(e.pageX, e.pageY);
     }
 });
-
 
 function createPixel(x, y) {
     const pixel = document.createElement('div');
@@ -43,6 +43,8 @@ function createPixel(x, y) {
     }, 1000);
 }
 
+
+// DYNAMIC ELEMENTS
 document.addEventListener('DOMContentLoaded', async () => {
     /// SKINS
     const heroUl = document.querySelector('#hero-ul');
@@ -76,14 +78,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     /// --- SKINS
 
     /// PROJECTS
-    const levelsUl = document.querySelector("#levels ul");
+    const levelsSection = document.querySelector("#levels");
+    const MIN_PROJECTS = 5;
+
+    let levelsUl = levelsSection.querySelector("ul");
+    if (!levelsUl) {
+        levelsUl = document.createElement("ul");
+        levelsSection.appendChild(levelsUl);
+    }
 
     Object.entries(dataProjects.projects).forEach(([category, projects], index) => {
         if (projects.length > 0) {
             const li = document.createElement("li");
     
             const h4 = document.createElement("h4");
-            h4.textContent = `Monde ${index + 1}`;
+            h4.textContent = category === "What do I play?" ? "World bonus" : `World ${index + 1}`;
             li.appendChild(h4);
     
             const iElement = document.createElement("i");
@@ -107,17 +116,33 @@ document.addEventListener('DOMContentLoaded', async () => {
                     overlay.innerHTML = `
                         <h4>${project.name}</h4>
                         <p>${project.description}</p>
-                        <p><strong>Date:</strong> ${project.date}</p>
-                        <p><strong>Duration:</strong> ${project.span}</p>
-                        <a href="${project.link}" target="_blank">Learn More</a>
+                    `;
+
+                    const plusDiv = document.createElement("div");
+                    plusDiv.classList.add("plus");
+                    Object.entries(project).forEach(([key, value]) => {
+                        if (!['img', 'name', 'description', 'link'].includes(key)) {
+                            const p = document.createElement("p");
+                            p.innerHTML = `<strong>${key}:</strong> ${value}`;
+                            plusDiv.appendChild(p);
+                        }
+                    });
+
+                    overlay.appendChild(plusDiv);
+                    overlay.innerHTML += `
+                        <a href="${project.link}" target="_blank">See More</a>
                     `;
 
                     img.addEventListener("click", () => {
+                        const isActive = overlay.classList.contains("active");
+
                         document.querySelectorAll(".overlay").forEach((overlay) => overlay.classList.remove("active"));
                         document.querySelectorAll(".carousel-item").forEach((item) => item.classList.remove("active"));
                     
-                        overlay.classList.toggle("active");
-                        projectDiv.classList.toggle("active");
+                        if (!isActive) {
+                            overlay.classList.add("active");
+                            projectDiv.classList.add("active");
+                        }
                     });
 
                     projectDiv.appendChild(img);
@@ -126,11 +151,58 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             });
 
+            const projectsToAdd = MIN_PROJECTS - projects.length;
+            if (projectsToAdd > 0) {
+                for (let i = 0; i < projectsToAdd; i++) {
+                    const lockDiv = document.createElement("div");
+                    lockDiv.classList.add("carousel-item", "lock");
+
+                    const lockImg = document.createElement("span");
+                    lockImg.classList.add("img-lock");
+
+                    lockDiv.appendChild(lockImg);
+                    projectContainer.appendChild(lockDiv);
+                }
+            }
+
             li.appendChild(projectContainer);
             levelsUl.appendChild(li);
         }
     });
-
-    
     /// --- PROJECTS
+
+    /// GRAB CAROUSEL
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach((carousel) => {
+        let isDragging = false;
+        let startX, scrollLeft;
+
+        carousel.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+            carousel.style.cursor = 'grabbing';
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            isDragging = false;
+            carousel.style.cursor = 'grab';
+        });
+
+        carousel.addEventListener('mouseup', () => {
+            isDragging = false;
+            carousel.style.cursor = 'grab';
+        });
+
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+
+            const x = e.pageX - carousel.offsetLeft; 
+            const walk = (x - startX) * 2;
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+    })
+    /// --- GRAB CAROUSEL
 });
