@@ -1,6 +1,6 @@
 const dataProjects = {
     "projects": {
-        "Games": [
+        "Game programming": [
             {
                 "img": "./src/img/orbitsurvive.png",
                 "name": "Orbit: Survive",
@@ -12,24 +12,27 @@ const dataProjects = {
                 "link": "https://aiskal.itch.io/orbit-survive"
             },
             {
-                "img": "./src/img/limbo.png",
-                "name": "Game 2",
-                "description": "An epic strategy game.",
+                "img": "./src/img/morpionIA.png",
+                "name": "Tic-tac-toe IA",
+                "description": "One of my first C++ program. You play against an IA using the minmax program to always play its best move. So you can either draw or lose.",
+                "stack": "C++",
+                "span": "2 days",
                 "team": "Alone",
-                "date": "2024",
-                "span": "1 year",
-                "link": "https://google.com"
+                "date": "24/10/2024",
+                "link": "https://github.com/Aiskal/morpionIA",
+                "download": "./src/projects/zips/morpionIA.zip"
             }
         ],
         "Web": [
             {
-                "img": "./src/img/limbo.png",
-                "name": "Website 1",
-                "description": "A modern portfolio site.",
-                "team": "Alone",
-                "date": "2023",
+                "img": "./src/img/puppets.png",
+                "name": "Puppets",
+                "description": "During my work-study program at 'Puppets', I had to recreate the designs done by the designer of the company with the help of my colleagues as a front deveveloper. One of my favorite experience.",
+                "stack": "AstroJS / Tailwind",
                 "span": "6 months",
-                "link": "https://google.com"
+                "team": "3 devs / 1 art",
+                "date": "2024",
+                "link": "https://www.puppets.fr/"
             }
         ],
         "Crea": [] ,
@@ -37,9 +40,28 @@ const dataProjects = {
             {
                 "img": "./src/img/limbo.png",
                 "name": "Warframe",
-                "description": "A modern portfolio site.",
-                "hours": "Alone",
-            }
+                "time": "+680h",
+            },
+            {
+                "img": "./src/img/valorant.png",
+                "name": "Valorant",
+                "time": "+600h",
+            },
+            {
+                "img": "./src/img/genshin.png",
+                "name": "Genshin",
+                "time": "Unknown",
+            },
+            {
+                "img": "./src/img/jhin.png",
+                "name": "League Of Legends",
+                "time": "Unknown",
+            },
+            {
+                "img": "./src/img/cassidy.jpg",
+                "name": "Overwatch",
+                "time": "+1600h (old)",
+            },
         ] 
     }
 };

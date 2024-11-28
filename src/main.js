@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     /// PROJECTS
     const levelsSection = document.querySelector("#levels");
-    const MIN_PROJECTS = 5;
+    const MIN_PROJECTS = 7;
 
     let levelsUl = levelsSection.querySelector("ul");
     if (!levelsUl) {
@@ -115,13 +115,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                     overlay.classList.add("overlay");
                     overlay.innerHTML = `
                         <h4>${project.name}</h4>
-                        <p>${project.description}</p>
                     `;
+                    if (project.description) {
+                        overlay.innerHTML += `
+                            <p>${project.description}</p>
+                        `;
+                    }
 
                     const plusDiv = document.createElement("div");
                     plusDiv.classList.add("plus");
                     Object.entries(project).forEach(([key, value]) => {
-                        if (!['img', 'name', 'description', 'link'].includes(key)) {
+                        if (!['img', 'name', 'description', 'link', "download"].includes(key)) {
                             const p = document.createElement("p");
                             p.innerHTML = `<strong>${key}:</strong> ${value}`;
                             plusDiv.appendChild(p);
@@ -129,9 +133,27 @@ document.addEventListener('DOMContentLoaded', async () => {
                     });
 
                     overlay.appendChild(plusDiv);
-                    overlay.innerHTML += `
-                        <a href="${project.link}" target="_blank">See More</a>
-                    `;
+
+                    const linksDiv = document.createElement("div");
+                    linksDiv.classList.add("links");
+                    
+                    if (project.link) {
+                        const seeMoreLink = document.createElement("a");
+                        seeMoreLink.href = project.link;
+                        seeMoreLink.target = "_blank";
+                        seeMoreLink.textContent = "See More";
+                        linksDiv.appendChild(seeMoreLink);
+                    }
+                    
+                    if (project.download) {
+                        const downloadLink = document.createElement("a");
+                        downloadLink.href = project.download;
+                        downloadLink.download = "";
+                        downloadLink.textContent = "Download Zip";
+                        linksDiv.appendChild(downloadLink);
+                    }
+                    
+                    if (linksDiv) overlay.appendChild(linksDiv);
 
                     img.addEventListener("click", () => {
                         const isActive = overlay.classList.contains("active");
@@ -194,6 +216,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             isDragging = false;
             carousel.style.cursor = 'grab';
         });
+        carousel.addEventListener('onclick', () => {
+            isDragging = false;
+            carousel.style.cursor = 'grab';
+        });
+
 
         carousel.addEventListener('mousemove', (e) => {
             if (!isDragging) return;
