@@ -35,7 +35,9 @@ const dataProjects = {
                 "link": "https://www.puppets.fr/"
             }
         ],
-        "Crea": [] ,
+        "Crea": [
+            
+        ] ,
         "What do I play?": [
             {
                 "img": "./src/img/limbo.png",
@@ -49,13 +51,19 @@ const dataProjects = {
             },
             {
                 "img": "./src/img/genshin.png",
-                "name": "Genshin",
+                "name": "Genshin Impact",
                 "time": "Unknown",
             },
             {
                 "img": "./src/img/jhin.png",
                 "name": "League Of Legends",
                 "time": "Unknown",
+            },
+            {
+                "img": "./src/img/connor.jpg",
+                "name": "Detroit Become Human",
+                "time": "+140h",
+                "state": "100% & 100% Steam",
             },
             {
                 "img": "./src/img/cassidy.jpg",
