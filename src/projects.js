@@ -35,7 +35,9 @@ const dataProjects = {
                 "link": "https://www.puppets.fr/"
             }
         ],
-        "Crea": [] ,
+        "Crea": [
+            
+        ] ,
         "What do I play?": [
             {
                 "img": "./src/img/Games/limbo.png",
@@ -58,7 +60,13 @@ const dataProjects = {
                 "time": "Unknown",
             },
             {
-                "img": "./src/img/Games/cassidy.jpg",
+                "img": "./src/img/connor.jpg",
+                "name": "Detroit Become Human",
+                "time": "+140h",
+                "state": "100% & 100% Steam",
+            },
+            {
+                "img": "./src/img/cassidy.jpg",
                 "name": "Overwatch",
                 "time": "+1600h (old)",
             },

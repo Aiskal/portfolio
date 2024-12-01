@@ -95,7 +95,7 @@
     transition: transform 0.3s ease, filter 0.3s ease;
     z-index: 1;
     border: 1px solid transparent;
-    filter: grayscale(10%) sepia(40%) brightness(85%);
+    filter: grayscale(20%) sepia(50%) brightness(85%);
     
     cursor: pointer;
     user-select: none;
@@ -141,7 +141,7 @@
     position: absolute;
     left: 3px;
     width: calc(100% - 3px);
-    height: 80%;
+    height: 90%;
     padding: 20px;
     box-sizing: border-box;
     background: var(--white);
