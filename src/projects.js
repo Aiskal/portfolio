@@ -36,7 +36,75 @@ const dataProjects = {
             }
         ],
         "Crea": [
-            
+            {
+                "img": "./src/img/Crea/bangchan.jpg",
+                "name": "Bang Chan",
+                "description": "A reproduction of clip's frame with Stray Kids' (k-pop group) leader: Bang Chan.",
+                "method": "Digital tablet",
+                "stack": "Krita",
+                "date": "05/2022",
+            },
+            {
+                "img": "./src/img/Crea/tableau.jpg",
+                "name": "A crying World",
+                "description": "My first abstract canvas. Painted with a vision from my soul.",
+                "method": "Knife painting",
+                "date": "11/2024",
+            },
+            {
+                "img": "./src/img/Crea/connor.jpg",
+                "name": "Connor",
+                "description": "Original Idea inspired by Detroit Become Human's main character named Connor. Crying because he didn't unlock one of the most important option in the game. An option allowing him to truly become himself.",
+                "method": "Chinese ink and pencil",
+                "date": "06/2024",
+            },
+            {
+                "img": "./src/img/Crea/corbeau.jpg",
+                "name": "Corbeau",
+                "description": "Original idea with a crow and a blue rose.",
+                "method": "Chinese ink (black and blue)",
+                "date": "05/2024",
+            },
+            {
+                "img": "./src/img/Crea/Paimon.jpg",
+                "name": "Paimon",
+                "description": "Original Idea inspired by Genshin Impact's character named Paimon.",
+                "method": "Digital tablet",
+                "stack": "Krita",
+                "date": "2022",
+            },
+            {
+                "img": "./src/img/Crea/albedo.jpg",
+                "name": "Albedo",
+                "description": "Original Idea inspired by Genshin Impact's character named Albedo.",
+                "method": "Digital tablet",
+                "stack": "Krita",
+                "date": "2021",
+            },
+            {
+                "img": "./src/img/Crea/AXelhnns.jpg",
+                "name": "A'Xelhnns",
+                "description": "Original character. A magic night elf.",
+                "method": "Digital tablet",
+                "stack": "Krita",
+                "date": "2021",
+            },
+            {
+                "img": "./src/img/Crea/dreamxdgnf.jpg",
+                "name": "DreamXD and GeorgeNotFound",
+                "description": "Original Idea inspired by the two minecraft Youtubers Dream and GeorgeNotFound playing the famous minecraft server 'The Dream SMP'.",
+                "method": "Digital tablet",
+                "stack": "Krita",
+                "date": "2021",
+            },
+            {
+                "img": "./src/img/Crea/ball.jpg",
+                "name": "Red ball",
+                "description": "Test of a black and white layer covered by a fully red layer.",
+                "method": "Digital tablet",
+                "stack": "Krita",
+                "date": "11/2020",
+            }
         ] ,
         "What do I play?": [
             {
@@ -60,13 +128,13 @@ const dataProjects = {
                 "time": "Unknown",
             },
             {
-                "img": "./src/img/connor.jpg",
+                "img": "./src/img/Games/connor.jpg",
                 "name": "Detroit Become Human",
                 "time": "+140h",
                 "state": "100% & 100% Steam",
             },
             {
-                "img": "./src/img/cassidy.jpg",
+                "img": "./src/img/Games/cassidy.jpg",
                 "name": "Overwatch",
                 "time": "+1600h (old)",
             },
