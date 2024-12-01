@@ -2,7 +2,7 @@ const dataProjects = {
     "projects": {
         "Game programming": [
             {
-                "img": "./src/img/orbitsurvive.png",
+                "img": "./src/img/MyGames/orbitsurvive.png",
                 "name": "Orbit: Survive",
                 "description": "A game created in one week for school. Instructions: 'Code a Unity game'. The movements related to a sphere gravity were a real challenge.",
                 "stack": "Unity",
@@ -12,7 +12,7 @@ const dataProjects = {
                 "link": "https://aiskal.itch.io/orbit-survive"
             },
             {
-                "img": "./src/img/morpionIA.png",
+                "img": "./src/img/MyGames/morpionIA.png",
                 "name": "Tic-tac-toe IA",
                 "description": "One of my first C++ program. You play against an IA using the minmax program to always play its best move. So you can either draw or lose.",
                 "stack": "C++",
@@ -25,7 +25,7 @@ const dataProjects = {
         ],
         "Web": [
             {
-                "img": "./src/img/puppets.png",
+                "img": "./src/img/Web/puppets.png",
                 "name": "Puppets",
                 "description": "During my work-study program at 'Puppets', I had to recreate the designs done by the designer of the company with the help of my colleagues as a front deveveloper. One of my favorite experience.",
                 "stack": "AstroJS / Tailwind",
@@ -38,27 +38,27 @@ const dataProjects = {
         "Crea": [] ,
         "What do I play?": [
             {
-                "img": "./src/img/limbo.png",
+                "img": "./src/img/Games/limbo.png",
                 "name": "Warframe",
                 "time": "+680h",
             },
             {
-                "img": "./src/img/valorant.png",
+                "img": "./src/img/Games/valorant.png",
                 "name": "Valorant",
                 "time": "+600h",
             },
             {
-                "img": "./src/img/genshin.png",
+                "img": "./src/img/Games/genshin.png",
                 "name": "Genshin",
                 "time": "Unknown",
             },
             {
-                "img": "./src/img/jhin.png",
+                "img": "./src/img/Games/jhin.png",
                 "name": "League Of Legends",
                 "time": "Unknown",
             },
             {
-                "img": "./src/img/cassidy.jpg",
+                "img": "./src/img/Games/cassidy.jpg",
                 "name": "Overwatch",
                 "time": "+1600h (old)",
             },
