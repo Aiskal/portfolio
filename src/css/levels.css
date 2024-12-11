@@ -168,7 +168,7 @@
     background: var(--white);
     color: var(--black);
     display: flex;
-    gap: 10px;
+    gap: 5px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -234,7 +234,7 @@
 }
 .overlay .plus{
     border-top: 1px solid var(--primary);
-    padding-top: 10px;
+    padding-top: 5px;
 }
 .overlay .plus p strong{
     text-transform: capitalize;
