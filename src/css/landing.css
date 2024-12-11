@@ -148,6 +148,8 @@
 
     top: 50px;
     right: 50px;
+
+    z-index: 100;
 }
 #landing #text h1 a{
     color: inherit;

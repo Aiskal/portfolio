@@ -54,6 +54,9 @@
 
     transition: all 0.5s ease;
 }
+#cv ul#hero-menu a{
+    text-decoration: none;
+}
 #cv ul#hero-menu li.cv{
     background-color: var(--primarybis);
     color: var(--white);
@@ -80,6 +83,15 @@
     top: 0;
     left: 0;
 } */
+
+.sub-section-cv{
+    height: 0%;
+}
+.sub-section-cv.active{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 
 #cv h3{
@@ -111,11 +123,14 @@
 
 #cv #screen-hero{
     display: flex;
-    margin: 0px 30px;
+    flex-direction: column-reverse;
+    margin: 0px 30px 30px 30px;
     height: 100%;
 }
 #cv #screen-hero > *{
-    width: 50%;
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
 }
 
 
@@ -132,7 +147,7 @@
 }
 
 #cv #left #text-hero h4{
-    font-size: 12em;
+    font-size: 7em;
     font-family: pixel;
     text-transform: uppercase;
 }
@@ -145,12 +160,14 @@
     width: 100%;
     height: fit-content;
     top: -1.2em;
-    left: 10px;
+    text-align: center;
+    display: block;
 }
 
 
 #cv #hero-ul{
     display: flex;
+    padding-left: 0;
 }
 #cv #hero-ul li{
     background-color: var(--black);
@@ -191,8 +208,8 @@
 
 #cv #right{
     position: relative;
-    margin-right: 70px;
-    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
 }
 #cv picture img {
     object-fit: contain;
@@ -229,4 +246,31 @@
     border: 1px double var(--white);
     border-radius: 100%;
     opacity: 0.08;
+}
+
+
+@media screen and (min-width: 1024px){
+    #cv #screen-hero{
+        flex-direction: row;
+    }
+    #cv #screen-hero > *{
+        width: 50%;
+        height: 100%;
+
+    }    
+    #cv #left #text-hero h4{
+        font-size: 12em;
+    }
+    #cv #right{
+        margin-right: 70px;
+        justify-content: center;
+    }
+    #cv #left #text-hero i{
+        text-align: start;
+        left: 10px;
+    }
+    #cv #hero-ul{
+        padding-left: 45px;
+    }
+    
 }

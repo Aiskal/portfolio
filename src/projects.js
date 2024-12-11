@@ -5,7 +5,7 @@ const dataProjects = {
                 "img": "./src/img/MyGames/orbitsurvive.png",
                 "name": "Orbit: Survive",
                 "description": "A game created in one week for school. Instructions: 'Code a Unity game'. The movements related to a sphere gravity were a real challenge.",
-                "stack": "Unity",
+                "stack": "C# (Unity)",
                 "span": "1 week",
                 "team": "Alone",
                 "date": "24/11/2024",
@@ -21,6 +21,16 @@ const dataProjects = {
                 "date": "24/10/2024",
                 "link": "https://github.com/Aiskal/morpionIA",
                 "download": "./src/projects/zips/morpionIA.zip"
+            },
+            {
+                "img": "./src/img/MyGames/ShaderWorld.png",
+                "name": "ShaderWorld",
+                "description": "A Unity world (almost) realized in shaders only!",
+                "stack": "Shader Graphs (Unity)",
+                "span": "5 days",
+                "team": "Alone",
+                "date": "06/12/2024",
+                "link": "https://aiskal.itch.io/shader-world"
             }
         ],
         "Web": [
@@ -73,38 +83,38 @@ const dataProjects = {
                 "stack": "Krita",
                 "date": "2022",
             },
-            {
-                "img": "./src/img/Crea/albedo.jpg",
-                "name": "Albedo",
-                "description": "Original Idea inspired by Genshin Impact's character named Albedo.",
-                "method": "Digital tablet",
-                "stack": "Krita",
-                "date": "2021",
-            },
-            {
-                "img": "./src/img/Crea/AXelhnns.jpg",
-                "name": "A'Xelhnns",
-                "description": "Original character. A magic night elf.",
-                "method": "Digital tablet",
-                "stack": "Krita",
-                "date": "2021",
-            },
-            {
-                "img": "./src/img/Crea/dreamxdgnf.jpg",
-                "name": "DreamXD and GeorgeNotFound",
-                "description": "Original Idea inspired by the two minecraft Youtubers Dream and GeorgeNotFound playing the famous minecraft server 'The Dream SMP'.",
-                "method": "Digital tablet",
-                "stack": "Krita",
-                "date": "2021",
-            },
-            {
-                "img": "./src/img/Crea/ball.jpg",
-                "name": "Red ball",
-                "description": "Test of a black and white layer covered by a fully red layer.",
-                "method": "Digital tablet",
-                "stack": "Krita",
-                "date": "11/2020",
-            }
+            // {
+            //     "img": "./src/img/Crea/albedo.jpg",
+            //     "name": "Albedo",
+            //     "description": "Original Idea inspired by Genshin Impact's character named Albedo.",
+            //     "method": "Digital tablet",
+            //     "stack": "Krita",
+            //     "date": "2021",
+            // },
+            // {
+            //     "img": "./src/img/Crea/AXelhnns.jpg",
+            //     "name": "A'Xelhnns",
+            //     "description": "Original character. A magic night elf.",
+            //     "method": "Digital tablet",
+            //     "stack": "Krita",
+            //     "date": "2021",
+            // },
+            // {
+            //     "img": "./src/img/Crea/dreamxdgnf.jpg",
+            //     "name": "DreamXD and GeorgeNotFound",
+            //     "description": "Original Idea inspired by the two minecraft Youtubers Dream and GeorgeNotFound playing the famous minecraft server 'The Dream SMP'.",
+            //     "method": "Digital tablet",
+            //     "stack": "Krita",
+            //     "date": "2021",
+            // },
+            // {
+            //     "img": "./src/img/Crea/ball.jpg",
+            //     "name": "Red ball",
+            //     "description": "Test of a black and white layer covered by a fully red layer.",
+            //     "method": "Digital tablet",
+            //     "stack": "Krita",
+            //     "date": "11/2020",
+            // }
         ] ,
         "What do I play?": [
             {

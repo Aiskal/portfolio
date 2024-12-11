@@ -34,7 +34,7 @@
 #levels ul i{
     text-transform: uppercase;
     font-style: normal;
-    font-size: 3em;
+    font-size: 2.5em;
     position: relative;
     top: -0.1em;
     left: -0.05em;
@@ -48,7 +48,7 @@
 
 .carousel {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     overflow-x: auto;
     overflow-y: clip;
     padding: 20px 20px 30px 20px;
@@ -65,8 +65,8 @@
 }
 .carousel::-webkit-scrollbar
 {
-	width: 10px;
-    height: 10px;
+	width: 0px;
+    height: 0px;
 }
 .carousel::-webkit-scrollbar-thumb
 {
@@ -86,8 +86,19 @@
     transition: margin-right 0.3s ease;
 }
 
+/* .carousel-item:not(.lock)::after {
+    position: absolute;
+    content:"";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 120%;
+    height: 120%;
+    background-color: var(--primary);
+} */
+
 .carousel-item.active {
-    margin-right: 350px;
+    margin-right: 300px;
 }
 
 .carousel-item.active img{
@@ -152,7 +163,7 @@
     left: 3px;
     width: calc(100% - 3px);
     height: 90%;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     background: var(--white);
     color: var(--black);
@@ -168,7 +179,7 @@
     border: 1px solid transparent;
 }
 .overlay.active {
-    width: 350px;
+    width: 300px;
     left: 100%;
 }
 
@@ -177,7 +188,7 @@
 }
 
 .overlay p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 0;
 }
 
@@ -230,7 +241,7 @@
 }
 
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1024px){
     .carousel {
         padding: 20px 50px 30px 50px;
     }
@@ -241,10 +252,14 @@
         flex: 0 0 250px;
     }
     .carousel-item.active {
-        margin-right: 300px;
+        margin-right: 330px;
     }
     .overlay.active {
-        width: 300px;
+        width: 330px;
+    }
+
+    #levels ul i{
+        font-size: 3em;
     }
     
 }
