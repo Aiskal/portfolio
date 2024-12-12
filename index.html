@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="icon" type="image/x-icon" href="./src/img/round.png">
 </head>
-<body>
+<body class="no-cursor">
 
     <!-- <div id="screen"></div> -->
 
@@ -35,14 +35,12 @@
         <section id="cv">
 
             <ul id="hero-menu" class="user-none">
-                <li class="active" data-index="0">Infos</li>
-                <li data-index="1">Skins</li>
-                <a href="./src/others/robillard_cv.pdf" download="robillard_anna_cv"><li class="cv">CV <img src="./src/svg/download.svg"/></li></a>
+                <li class="active" data-index="0" data-cursor="pointer">Infos</li>
+                <li data-index="1" data-cursor="pointer">Skins</li>
+                <a href="./src/others/robillard_cv.pdf" download="robillard_anna_cv" data-cursor="pointer"><li class="cv">CV <img src="./src/svg/download.svg"/></li></a>
             </ul>
 
             <div class="sub-section-cv active" data-index="0">
-                <h3>Infos</h3>
-
                 <div id="block-about">
                     <div id="here-i-am">
                         <h4>Greeting!</h4>
@@ -59,15 +57,17 @@
 
                         <p>Video games are portals, and there is an infinite variety of them. I just can't wait to explore all the possibilites!</p> 
                         
+                        <br/>
                         <i>Changing one line of code can change the game.</i>
                     </div>
 
                     <ul id="hashtags">
-                        <li>#gamedev</li>
-                        <li>#cpp</li>
-                        <li>#cs</li>
-                        <li>#videogames</li>
-                        <li>#imready</li>
+                        <li>#<p>gamedev</p></li>
+                        <li>#<p>cs</p></li>
+                        <li>#<p>unity</p></li>
+                        <li>#<p>cpp</p></li>
+                        <li>#<p>videogames</p></li>
+                        <li>#<p>imready</p></li>
                     </ul>
                 </div>
             </div>
@@ -83,9 +83,6 @@
                         </div>
     
                         <ul id="hero-ul" class="user-none">
-                            <!-- <li class="active"><img src="./src/img/professeur.png"/></li>
-                            <li><img src="./src/img/vr.png"/></li>
-                            <li><img src="./src/img/minime.png"/></li> -->
                         </ul>
                     </div>
     
@@ -106,8 +103,10 @@
         <section id="levels">
             <span id="start">
                 <h3>Start!</h3>
-                <i>Click on the cards!</i>
-                <i>Scroll (PC) - Swipe (Phone)</i>                
+                <div id="astuces">
+                    <i>Click on the cards!</i>
+                    <i>Scroll (PC) - Swipe (Phone)</i>                
+                </div>
             </span>
 
         </section>

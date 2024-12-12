@@ -76,6 +76,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     Object.entries(dataSkins.skins).forEach(([name, details], index) => {
         const li = document.createElement('li');
+        li.dataset.cursor = "pointer";
+
         if (index === 0) li.classList.add('active');
 
         const img = document.createElement('img');
@@ -131,6 +133,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     projectDiv.classList.add("carousel-item");
 
                     const img = document.createElement("img");
+                    img.dataset.cursor = "pointer";
                     img.src = project.img;
                     img.alt = project.name;
 
@@ -227,4 +230,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     });
     /// --- GRAB CAROUSEL
+
+    //CURSOR
+    const customCursor = document.createElement('div');
+    customCursor.id = 'custom-cursor';
+    document.body.appendChild(customCursor);
+
+    document.addEventListener('mousemove', (e) => {
+        customCursor.style.left = `${e.pageX}px`;
+        customCursor.style.top = `${e.pageY}px`;
+    });
+
+    document.querySelectorAll('[data-cursor="pointer"]').forEach((element) => {
+        element.style.cursor = 'none'; 
+
+        element.addEventListener('mouseover', () => {
+            customCursor.classList.add('pointer');
+        });
+
+        element.addEventListener('mouseout', () => {
+            customCursor.classList.remove('pointer');
+        });
+    });
 });

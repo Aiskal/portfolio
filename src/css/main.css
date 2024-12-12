@@ -92,3 +92,43 @@ ul {
 .user-none{
     user-select: none;
 }
+
+.no-cursor{
+    cursor: none;
+}
+a {
+    cursor: none;
+}
+
+#custom-cursor {
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background: url('../UI_Crosshair_White/UI_CrosshairsV2_g1165.png') no-repeat center center;
+    background-size: contain;
+    filter: drop-shadow(0px 0px 7px var(--black)) brightness(80);
+
+    animation: infiniteScale 0.5s linear infinite alternate-reverse;
+}
+#custom-cursor.pointer{
+    background: url('../UI_Crosshair_White/UI_CrosshairsV2_g1225.png') no-repeat center center;
+    background-size: contain;
+}
+
+@keyframes infiniteScale {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+@media (hover: hover) {
+    #custom-cursor {
+        display: block;
+    }
+}

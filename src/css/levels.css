@@ -19,22 +19,48 @@
 }
 
 #levels #start {
-    margin-bottom: 3.5rem;
+    margin-bottom: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 50px;
 }
 #levels #start h3 {
+    width: 100%;
+    text-align: center;
     font-family: 'pixel';
     font-size: 3.5rem;
-    background-color: var(--primary);
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin-bottom: 10px;
+    background: linear-gradient(0deg, var(--primarybis) 0%, var(--primary) 100%);
+    padding: 10px;
+    border-radius: 2px;
+    border-top: 4px solid var(--white);
+    border-bottom: 4px solid var(--white);
 }
 #levels #start i {
     font-size: 1.1em;
+}
+#levels #start #astuces {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(0deg, var(--secondary) 0%, var(--black) 100%);
+    border-radius: 2px;
+    border-left: 5px solid var(--white);
+    font-family: pixel;
+    font-size: 1.2em;
+}
+#levels #start #astuces::before {
+    content: "TIPS";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    font-size: 2em;
 }
 
 #levels ul {
@@ -101,7 +127,7 @@
     scroll-behavior: smooth;
 }
 .carousel:active {
-    cursor: grabbing;
+    /* cursor: grabbing; */
 }
 .carousel::-webkit-scrollbar-track
 {
@@ -162,7 +188,7 @@
     border: 1px solid transparent;
     filter: grayscale(20%) sepia(50%) brightness(85%);
     
-    cursor: pointer;
+    /* cursor: pointer; */
     user-select: none;
 }
 
@@ -174,7 +200,7 @@
 }
 .carousel-item.lock .img-lock{
     position: relative;
-    cursor: inherit;
+    /* cursor: inherit; */
 }
 .carousel-item.lock .img-lock::after{
     content: "";

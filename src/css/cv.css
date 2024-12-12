@@ -34,34 +34,70 @@
     flex-direction: column;
     gap: 20px;
 
-    padding: 0% 15%;
+    padding: 0% 10px;
     height: 100%;
 }
 #cv #here-i-am{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 15px;
     text-align: justify;
 
     background-color: var(--black);
-    padding: 50px;
+    border-top: 4px solid var(--white);
+    border-bottom: 4px solid var(--white);
+    padding: 70px 50px 50px 50px;
     border-radius: 2px;
+}
+#cv #here-i-am::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, var(--black) 100%);
+}
+#cv #here-i-am::after {
+    content: "INFORMATION";
+    font-family: pixel;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 0.2;
+    font-size: 3em;
+    word-wrap: break-word;
 }
 #cv #here-i-am h4{
     color: var(--primarybis);
+    text-transform: uppercase;
+    font-size: 1rem;
 }
 #cv #here-i-am .bold{
     color: var(--secondarybis);
 }
+#cv #here-i-am i{
+    text-align: center;
+}
 #cv #hashtags {
+    padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
 
     color: var(--primarybis);
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 2em;
+}
+#cv #hashtags p{
+    font-family: pixel;
+    display: inline;
 }
 
 
@@ -77,10 +113,13 @@
     font-size: 2em;
     font-family: pixel;
     position: relative;
+    z-index: 1;
 }
 #cv ul#hero-menu::before {
-    content: "";
+    /* content: ""; */
     position: absolute;
+    display: block;
+    z-index: 0;
     width: 100%;
     height: 100%;
     top: 0;
@@ -118,7 +157,7 @@
 #cv ul#hero-menu li.active{
     background-color: var(--white);
     color: var(--primary);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 
@@ -241,7 +280,7 @@
 
     transition: all 0.5s ease;
 
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 #cv #hero-ul li.active,
 #cv #hero-ul li:hover{
@@ -307,6 +346,14 @@
 
 
 @media screen and (min-width: 1024px){
+    #cv #block-about {
+        padding: 0% 15%;
+    }
+
+    #cv #here-i-am::after {
+        font-size: 8em;
+    }
+
     #cv #screen-hero{
         flex-direction: row;
     }
