@@ -28,6 +28,44 @@
     z-index: -1;
 }
 
+#cv #block-about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 0% 15%;
+    height: 100%;
+}
+#cv #here-i-am{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: justify;
+
+    background-color: var(--black);
+    padding: 50px;
+    border-radius: 2px;
+}
+#cv #here-i-am h4{
+    color: var(--primarybis);
+}
+#cv #here-i-am .bold{
+    color: var(--secondarybis);
+}
+#cv #hashtags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    color: var(--primarybis);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+
+
 #cv ul#hero-menu {
     display: flex;
     flex-direction: row;
