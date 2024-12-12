@@ -46,6 +46,29 @@ function createPixel(x, y) {
 
 // DYNAMIC ELEMENTS
 document.addEventListener('DOMContentLoaded', async () => {
+    //SUB SECTION CV
+    const menuItems = document.querySelectorAll('#hero-menu li:not(.cv)');
+    const sections = document.querySelectorAll('.sub-section-cv');
+
+    menuItems.forEach((item) => {
+        item.addEventListener('click', () => {
+            const index = item.getAttribute('data-index');
+
+            // Activer l'élément de menu
+            menuItems.forEach((el) => el.classList.remove('active'));
+            item.classList.add('active');
+
+            // Activer la sous-section correspondante
+            sections.forEach((section) => {
+                if (section.getAttribute('data-index') === index) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        });
+    });
+    
     /// SKINS
     const heroUl = document.querySelector('#hero-ul');
     const heroImage = document.querySelector('#right picture img');

@@ -3,6 +3,19 @@
     padding: 70px 30px;
     box-sizing: border-box;
     background-color: var(--black);
+
+    position: relative;
+}
+#levels::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.009;
+    background-image: url("../img/bgcv.jpg");
+    background-size: 500px 500px;
 }
 
 #levels #start {
@@ -15,6 +28,10 @@
 #levels #start h3 {
     font-family: 'pixel';
     font-size: 3.5rem;
+    background-color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
 }
 #levels #start i {
     font-size: 1.1em;
@@ -38,6 +55,33 @@
     position: relative;
     top: -0.1em;
     left: -0.05em;
+
+    width: 100%;
+    display: block;
+}
+#levels ul i::before{
+    content: "More this way";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 0;
+    opacity: 0.2;
+    font-size: 1rem;
+}
+#levels ul i::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 0;
+    opacity: 0.2;
+    background-image: url("../svg/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 100%;
+    transform: rotate(-90deg);
 }
 
 #levels ul li {
