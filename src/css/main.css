@@ -2,6 +2,7 @@
 @import url("./landing.css");
 @import url("./cv.css");
 @import url("./levels.css");
+@import url("./footer.css");
 
 :root{
     --primary:#678d58;

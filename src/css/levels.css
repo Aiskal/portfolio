@@ -13,7 +13,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    opacity: 0.009;
+    opacity: 0.01;
     background-image: url("../img/bgcv.jpg");
     background-size: 500px 500px;
 }
@@ -84,30 +84,35 @@
 
     width: 100%;
     display: block;
+
+    z-index: 1;
 }
-#levels ul i::before{
-    content: "More this way";
+
+#levels ul i::before,
+#levels ul i::after{
     position: absolute;
     width: 100px;
     height: 100px;
-    top: 0;
+    transform: translateY(-50%);
+    top: 50%;
     right: 0;
     opacity: 0.2;
+    z-index: -1;
+}
+#levels ul i::before{
+    content: "More this way";
+
     font-size: 1rem;
 }
 #levels ul i::after{
     content: "";
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 0;
-    right: 0;
-    opacity: 0.2;
+    
     background-image: url("../svg/arrow.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 100% 100%;
-    transform: rotate(-90deg);
+    transform: translateY(-50%) rotate(-90deg);
+
 }
 
 #levels ul li {

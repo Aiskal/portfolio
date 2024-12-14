@@ -43,6 +43,15 @@ const dataProjects = {
                 "team": "3 devs / 1 art",
                 "date": "2024",
                 "link": "https://www.puppets.fr/"
+            },
+            {
+                "img": "./src/img/Web/portfolio.png",
+                "name": "Porfolio",
+                "description": "This entire website was hand made!",
+                "stack": "HTML / CSS / JS",
+                "span": "2 months",
+                "team": "Alone",
+                "date": "2024",
             }
         ],
         "Crea": [

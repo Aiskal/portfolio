@@ -47,8 +47,7 @@
     background-color: var(--black);
     border-top: 4px solid var(--white);
     border-bottom: 4px solid var(--white);
-    padding: 70px 50px 50px 50px;
-    border-radius: 2px;
+    padding: 40px;
 }
 #cv #here-i-am::before{
     content: "";
@@ -75,10 +74,17 @@
 #cv #here-i-am h4{
     color: var(--primarybis);
     text-transform: uppercase;
-    font-size: 1rem;
+}
+
+#cv #here-i-am h4,
+#cv #here-i-am .bold{
+    font-weight: bold;
+    font-family: pixel;
+    font-size: 1.5em;
 }
 #cv #here-i-am .bold{
     color: var(--secondarybis);
+    font-size: 1.3em;
 }
 #cv #here-i-am i{
     text-align: center;
@@ -322,7 +328,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 2.5em;
+    font-size: 1.5em;
     width: fit-content;
     text-align: center;
     font-family: pixel;
@@ -330,6 +336,7 @@
     border: 2px solid var(--black);
     border-radius: 100%;
     padding: 30px;
+    transform: translateY(-50%);
 }
 #cv #lvl::before{
     content: "";
@@ -348,6 +355,10 @@
 @media screen and (min-width: 1024px){
     #cv #block-about {
         padding: 0% 15%;
+    }
+
+    #cv #here-i-am{
+        padding: 70px 50px 50px 50px;
     }
 
     #cv #here-i-am::after {
@@ -375,6 +386,10 @@
     }
     #cv #hero-ul{
         padding-left: 45px;
+    }
+    #cv #lvl{
+        font-size: 2.5em;
+        transform: none;
     }
     
 }

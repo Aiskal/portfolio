@@ -231,6 +231,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
     /// --- GRAB CAROUSEL
 
+    // FOOTER
+    const footer = document.querySelector('footer');
+    const toggleButtons = document.querySelectorAll('.toggle-footer');
+
+    toggleButtons.forEach(toggleButton => {
+        toggleButton.addEventListener('click', () => {
+            footer.classList.toggle('active');
+        });
+    });
+
     //CURSOR
     const customCursor = document.createElement('div');
     customCursor.id = 'custom-cursor';
